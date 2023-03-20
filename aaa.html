@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+	#display-two, #display-three{ display: none }
+</style>
+
+<script>
+function displayResult(){
+	var p1 = document.getElementById("display-one");
+	var p2 = document.getElementById('display-two')
+
+	p1.style.display='none';
+	p2.style.display='block';
+
+}
+
+function changePage(){
+ 
+	var main_name = document.getElementById("main_name");
+	var main_img = document.getElementById('main_img');
+	var main_label= document.getElementById("main_label");
+	var sub_img1 = document.getElementById('sub_img1');
+	var sub_img2 = document.getElementById("sub_img2");
+	var sub_img3 = document.getElementById('sub_img3');
+	var sub_img4 = document.getElementById("sub_img4");
+	var sub_img5 = document.getElementById('sub_img5');
+
+}
+
+
+function goHome(){
+	var p1 = document.getElementById("display-one");
+	var p2 = document.getElementById('display-two')
+
+	p1.style.display='block';
+	p2.style.display='none';
+
+}
+</script>
+
+</head>
+<body>
+	<!-- 처음 선택화면 --->
+	<p id="display-one" >
+		<label>성별</label> &nbsp&nbsp
+		<input type='checkbox' name='gender' value='남자'>남자
+		<input type='checkbox' name='gender' value='여자'>여자 </br>
+
+		<label>가격</label> &nbsp&nbsp
+		<input type='number' name='price' value='0'></br>
+
+		<input type='button' name="검사" value="검사" onclick="displayResult()">
+	</p>
+
+	<!-- 예측 결과 -->
+	<p id="display-two">
+		
+		<label id='main_name'> 향수명 </label><br>
+		<img   id='main_img' src="C:\\Users\\kwon\\Pictures\\2023 (1).png"> </br>
+		<label id='main_label'> 가격 </label><br>
+
+		<img id='sub_img1' src="C:\\Users\\kwon\\Pictures\\2023 (1).png" width=50px height=50px onclick="changePage()">&nbsp&nbsp
+		<img id='sub_img2' src="C:\\Users\\kwon\\Pictures\\2023 (1).png" width=50px height=50px onclick="changePage()"> &nbsp&nbsp
+		<img id='sub_img3' src="C:\\Users\\kwon\\Pictures\\2023 (1).png" width=50px height=50px onclick="changePage()"> &nbsp&nbsp
+		<img id='sub_img4' src="C:\\Users\\kwon\\Pictures\\2023 (1).png" width=50px height=50px onclick="changePage()"> &nbsp&nbsp
+		<img id='sub_img5' src="C:\\Users\\kwon\\Pictures\\2023 (1).png" width=50px height=50px onclick="changePage()"></br>
+		<input type='button' name="검사" value="처음부터" onclick="goHome()">
+	</p>
+
+	
+	
+</body>
+</html>

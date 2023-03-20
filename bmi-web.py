@@ -13,6 +13,7 @@ sys.stdout=codecs.getwriter('utf-8')(sys.stdout.detach())
 def displayWEB(detect_msg):
     print("Content-Type: text/html; charset=utf-8")
     print("")
+    html 
     html="""
     <!DOCTYPE html>
     <html lang="en">
@@ -41,7 +42,8 @@ def detect_bmi(w, h):
     return str(res[0])
 
 # 기능 구현 -----------------------------------------------------
-# (1) 학습 데이터 읽기
+# (1) 학습 데이터 읽기<!DOCTYPE html>
+    # <html lang="en"
 # pklfile = os.path.dirname(__file__) + "/bmi.pkl"
 
 import pickle
