@@ -8,12 +8,17 @@ import openpyxl
 import os
 
 
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+
+driver = webdriver.Chrome(options=options)
 driver.get(f'http://www.d2startup.com/portfolio')
-elements = driver.find_elements(By.CSS_SELECTOR, ".text_carddesc.eps")
+time.sleep(2)
+elements = driver.find_elements(By.CLASS_NAME, "text_carddesc.eps")
 
 # 텍스트 출력
 for element in elements:
     print(element.text)
 
-driver.quit()
+# driver.quit()
